@@ -1,0 +1,13 @@
+{
+  "item.hemp.hemp_leaf": "Hemp Leaf",
+  "item.hemp.hemp_seeds": "Hemp Seeds",
+  "item.hemp.wet_hemp": "Wet Hemp",
+  "item.hemp.dry_hemp": "Dried Hemp",
+  "item.hemp.grinder": "Grinder",
+  "item.hemp.joint": "Joint",
+
+  "block.hemp.hemp_block": "Hemp Block",
+  "block.hemp.wet_hemp_block": "Wet Hemp Block",
+
+  "itemGroup.hemp.hemp": "Hemp"
+}

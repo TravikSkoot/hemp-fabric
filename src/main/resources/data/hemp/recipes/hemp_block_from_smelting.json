@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "hemp_block",
+  "ingredient": {
+    "item": "hemp:wet_hemp_block"
+  },
+  "result": "hemp:hemp_block"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "hemp",
+  "version": "${version}",
+
+  "name": "Hemp",
+  "description": "Adds 420 Stuff to the Game!",
+  "authors": [
+    "TravikSkoot"
+  ],
+  "contact": {
+    "homepage": "https://github.com/TravikSkoot/hemp-fabric",
+    "sources": "https://github.com/TravikSkoot/hemp-fabric",
+    "issues": "https://github.com/TravikSkoot/hemp-fabric/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/hemp/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "de.travikskoot.hemp.client.HempClient"
+    ],
+    "main": [
+      "de.travikskoot.hemp.Hemp"
+    ]
+  },
+  "mixins": [
+    "hemp.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.issues": "https://github.com/TravikSkoot/hemp-fabric/issues"
+      }
+    }
+  }
+}
