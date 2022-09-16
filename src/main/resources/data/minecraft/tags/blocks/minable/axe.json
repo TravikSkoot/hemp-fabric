@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-
+    "hemp:hemp_block",
+    "hemp:wet_hemp_block"
   ]
 }

@@ -1,4 +1,6 @@
 {
+  "itemGroup.hemp.hemp": "Hemp",
+
   "item.hemp.hemp_leaf": "Hemp Leaf",
   "item.hemp.hemp_seeds": "Hemp Seeds",
   "item.hemp.wet_hemp": "Wet Hemp",
@@ -6,8 +8,14 @@
   "item.hemp.grinder": "Grinder",
   "item.hemp.joint": "Joint",
 
+  "item.hemp.joint.tooltip": "Smoke me!",
+
+  "item.hemp.joint.message.swimming": "You can't smoke here, how high are you?",
+
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
+  "block.hemp.grow_box": "Grow Box",
 
-  "itemGroup.hemp.hemp": "Hemp"
+  "effect.hemp.stoned": "Stoned",
+  "effect.hemp.high": "High"
 }

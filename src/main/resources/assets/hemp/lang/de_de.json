@@ -1,0 +1,21 @@
+{
+  "itemGroup.hemp.hemp": "Hemp",
+
+  "item.hemp.hemp_leaf": "Hanfblatt",
+  "item.hemp.hemp_seeds": "Hanfsamen",
+  "item.hemp.wet_hemp": "Nasses Hanf",
+  "item.hemp.dry_hemp": "Getrocknetes Hanf",
+  "item.hemp.grinder": "Grinder",
+  "item.hemp.joint": "Joint",
+
+  "item.hemp.joint.tooltip": "Rauch mich!",
+
+  "item.hemp.joint.message.swimming": "Du kannst hier nicht rauchen, wie high bist du?",
+
+  "block.hemp.hemp_block": "Hanfblock",
+  "block.hemp.wet_hemp_block": "Nasser Hanfblock",
+  "block.hemp.grow_box": "Grow Box",
+
+  "effect.hemp.stoned": "Stoned",
+  "effect.hemp.high": "High"
+}

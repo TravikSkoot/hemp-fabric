@@ -2,6 +2,7 @@ package de.travikskoot.hemp;
 
 import de.travikskoot.hemp.block.HempBlocks;
 import de.travikskoot.hemp.item.HempItems;
+import de.travikskoot.hemp.effect.HempStatusEffect;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +19,6 @@ public class Hemp implements ModInitializer {
 
         HempItems.registerModItems();
         HempBlocks.registerModBlocks();
+        HempStatusEffect.registerModEffects();
     }
 }
