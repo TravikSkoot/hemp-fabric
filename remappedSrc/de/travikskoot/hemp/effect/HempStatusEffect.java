@@ -15,7 +15,7 @@ public class HempStatusEffect {
     private static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
         return Registry.register(Registry.STATUS_EFFECT, new Identifier(Hemp.MOD_ID, name), effect);
     }
-    public static void registerHempEffects() {
+    public static void registerModEffects() {
         Hemp.LOGGER.debug("Registering Mod Status Effects for " + Hemp.MOD_ID);
     }
 }

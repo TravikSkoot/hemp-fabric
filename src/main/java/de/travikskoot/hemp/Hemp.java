@@ -17,8 +17,8 @@ public class Hemp implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Initializing " + MOD_ID);
 
-        HempItems.registerModItems();
-        HempBlocks.registerModBlocks();
-        HempStatusEffect.registerModEffects();
+        HempItems.registerHempItems();
+        HempBlocks.registerHempBlocks();
+        HempStatusEffect.registerHempEffects();
     }
 }

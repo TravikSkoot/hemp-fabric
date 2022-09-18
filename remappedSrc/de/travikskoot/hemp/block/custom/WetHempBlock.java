@@ -2,10 +2,8 @@ package de.travikskoot.hemp.block.custom;
 
 import net.minecraft.block.HayBlock;
 
-public class HempBlock extends HayBlock {
-    public HempBlock(Settings settings) {
+public class WetHempBlock extends HayBlock {
+    public WetHempBlock(Settings settings) {
         super(settings);
     }
-
-
 }

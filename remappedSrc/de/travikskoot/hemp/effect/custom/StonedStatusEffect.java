@@ -21,7 +21,11 @@ public class StonedStatusEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity){
-            //TODO remove other effects when effect is expired
+            if (entity.hasStatusEffect(HempStatusEffect.STONED)) {
+                entity.removeStatusEffect(StatusEffects.REGENERATION);
+                entity.removeStatusEffect(StatusEffects.JUMP_BOOST);
+                //TODO remove other effects when effect is expired
+            }
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1000000));
             entity.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 1000000));
         }

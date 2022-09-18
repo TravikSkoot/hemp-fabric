@@ -8,13 +8,16 @@
   "item.hemp.grinder": "Grinder",
   "item.hemp.joint": "Joint",
 
-  "item.hemp.joint.tooltip": "Smoke me!",
+  "item.hemp.joint.tooltip.shift": "Smoke me!",
+  "item.hemp.joint.tooltip": "Press shift for more info",
 
   "item.hemp.joint.message.swimming": "You can't smoke here, how high are you?",
 
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
   "block.hemp.grow_box": "Grow Box",
+  "block.hemp.hemp_soil": "Hemp Soil",
+  "block.hemp.hemp_crop": "Hemp Crop",
 
   "effect.hemp.stoned": "Stoned",
   "effect.hemp.high": "High"
