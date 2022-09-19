@@ -1,5 +1,6 @@
 package de.travikskoot.hemp.client;
 
+import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.block.HempBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;

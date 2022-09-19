@@ -27,19 +27,9 @@ public class HempBlocks {
     public static final Block GROW_BOX = registerBlock("grow_box",
             new GrowBoxBlock(FabricBlockSettings.of(Material.SHULKER_BOX).strength(1f).nonOpaque()), HempItemGroup.HEMP);
 
-    public static final Block HEMP_SOIL = registerBlock("hemp_soil",
-            new HempSoilBlock(FabricBlockSettings.of(Material.SOIL)
-                    .ticksRandomly().strength(0.6f).sounds(BlockSoundGroup.GRAVEL)
-                    .blockVision(HempBlocks::always).suffocates(HempBlocks::always))
-            ,HempItemGroup.HEMP);
-
     public static final Block HEMP_CROP = registerBlockWithoutItem("hemp_crop",
             new HempCropBlock(FabricBlockSettings.of(Material.PLANT).nonOpaque().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
-
-    private static boolean always(BlockState state, BlockView world, BlockPos pos) {
-        return true;
-    }
 
     //Block Register
     private static Block registerBlockWithoutItem(String name, Block block) {
