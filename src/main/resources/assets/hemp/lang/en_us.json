@@ -20,5 +20,7 @@
   "block.hemp.hemp_crop": "Hemp Crop",
 
   "effect.hemp.stoned": "Stoned",
-  "effect.hemp.high": "High"
+  "effect.hemp.high": "High",
+
+  "entity.minecraft.villager.hemp_farmer": "Hemp Farmer"
 }
