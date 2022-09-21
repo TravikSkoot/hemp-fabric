@@ -18,9 +18,23 @@ public class HempLootTableModifier {
     private static final Identifier VILLAGE_DESERT_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_desert_house");
 
+    private static final Identifier VILLAGE_PLAINS_HOUSE_CHEST = new Identifier("minecraft",
+            "chests/village/village_plains_house");
+
+    private static final Identifier VILLAGE_SAVANNA_HOUSE_CHEST = new Identifier("minecraft",
+            "chests/village/village_savanna_house");
+
+    private static final Identifier VILLAGE_TAIGA_HOUSE_CHEST = new Identifier("minecraft",
+            "chests/village/village_taiga_house");
+
+    private static final Identifier VILLAGE_SNOWY_HOUSE_CHEST = new Identifier("minecraft",
+            "chests/village/village_snowy_house");
+
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (VILLAGE_DESERT_HOUSE_CHEST.equals(id)) {
+            if (VILLAGE_DESERT_HOUSE_CHEST.equals(id) || VILLAGE_PLAINS_HOUSE_CHEST.equals(id)
+                    || VILLAGE_SAVANNA_HOUSE_CHEST.equals(id) || VILLAGE_TAIGA_HOUSE_CHEST.equals(id)
+                    || VILLAGE_SNOWY_HOUSE_CHEST.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(UniformLootNumberProvider.create(1, 3))
                         .bonusRolls(ConstantLootNumberProvider.create(0))
