@@ -21,6 +21,9 @@ public class HempItems {
     public static final Item HEMP_SEEDS = registerItem("hemp_seeds",
             new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings().group(HempItemGroup.HEMP)));
 
+    public static final Item GRINDER = registerItem("grinder",
+            new Item(new FabricItemSettings().group(HempItemGroup.HEMP)));
+
     //Item Register
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Hemp.MOD_ID, name), item);
