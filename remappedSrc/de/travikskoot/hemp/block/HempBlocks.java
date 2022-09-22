@@ -1,9 +1,7 @@
 package de.travikskoot.hemp.block;
 
 import de.travikskoot.hemp.Hemp;
-import de.travikskoot.hemp.block.custom.GrowBoxBlock;
-import de.travikskoot.hemp.block.custom.HempBlock;
-import de.travikskoot.hemp.block.custom.WetHempBlock;
+import de.travikskoot.hemp.block.custom.*;
 import de.travikskoot.hemp.item.HempItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -13,7 +11,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockView;
 
 public class HempBlocks {
 
@@ -27,7 +27,18 @@ public class HempBlocks {
     public static final Block GROW_BOX = registerBlock("grow_box",
             new GrowBoxBlock(FabricBlockSettings.of(Material.SHULKER_BOX).strength(1f).nonOpaque()), HempItemGroup.HEMP);
 
+    public static final Block ROLLING_TRAY = registerBlock("rolling_tray",
+            new RollingTrayBlock(FabricBlockSettings.of(Material.METAL).strength(2f).nonOpaque().requiresTool()), HempItemGroup.HEMP);
+
+    public static final Block HEMP_CROP = registerBlockWithoutItem("hemp_crop",
+            new HempCropBlock(FabricBlockSettings.of(Material.PLANT).nonOpaque().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
+
     //Block Register
+    private static Block registerBlockWithoutItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
+    }
+
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
@@ -40,7 +51,7 @@ public class HempBlocks {
     }
 
     //Console Output
-    public static void registerModBlocks() {
+    public static void registerHempBlocks() {
         Hemp.LOGGER.debug("Registering Mod Blocks for " + Hemp.MOD_ID);
     }
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "hemp:block/template_hemp_soil",
-  "textures": {
-    "dirt": "hemp:block/hemp_soil_dirt",
-    "top": "hemp:block/hemp_soil"
-  }
-}

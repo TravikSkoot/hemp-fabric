@@ -6,4 +6,6 @@ public class HempBlock extends HayBlock {
     public HempBlock(Settings settings) {
         super(settings);
     }
+
+
 }
