@@ -30,6 +30,9 @@ public class HempBlocks {
     public static final Block ROLLING_TRAY = registerBlock("rolling_tray",
             new RollingTrayBlock(FabricBlockSettings.of(Material.METAL).strength(2f).nonOpaque().requiresTool()), HempItemGroup.HEMP);
 
+    public static final Block STASH_JAR = registerBlock("stash_jar",
+            new StashJarBlock(FabricBlockSettings.of(Material.GLASS).strength(2f).nonOpaque().sounds(BlockSoundGroup.GLASS)), HempItemGroup.HEMP);
+
     public static final Block HEMP_CROP = registerBlockWithoutItem("hemp_crop",
             new HempCropBlock(FabricBlockSettings.of(Material.PLANT).nonOpaque().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));

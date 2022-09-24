@@ -20,11 +20,11 @@ public class BadTripStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5200, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5210, amplifier, false, false, false));
         super.applyUpdateEffect(entity, amplifier);
     }
 

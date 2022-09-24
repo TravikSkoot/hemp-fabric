@@ -20,8 +20,8 @@ public class HighStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 5200, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 5210, amplifier, false, false, false));
         super.applyUpdateEffect(entity, amplifier);
     }
 

@@ -4,10 +4,13 @@ import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.item.HempItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntryType;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class HempLootTableModifier {
 
@@ -32,9 +35,9 @@ public class HempLootTableModifier {
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (VILLAGE_DESERT_HOUSE_CHEST.equals(id) || VILLAGE_PLAINS_HOUSE_CHEST.equals(id)
+            if (source.isBuiltin() && (VILLAGE_DESERT_HOUSE_CHEST.equals(id) || VILLAGE_PLAINS_HOUSE_CHEST.equals(id)
                     || VILLAGE_SAVANNA_HOUSE_CHEST.equals(id) || VILLAGE_TAIGA_HOUSE_CHEST.equals(id)
-                    || VILLAGE_SNOWY_HOUSE_CHEST.equals(id)) {
+                    || VILLAGE_SNOWY_HOUSE_CHEST.equals(id))) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(UniformLootNumberProvider.create(1, 3))
                         .bonusRolls(ConstantLootNumberProvider.create(0))

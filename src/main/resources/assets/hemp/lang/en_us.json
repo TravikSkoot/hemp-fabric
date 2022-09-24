@@ -4,14 +4,15 @@
   "item.hemp.hemp_leaf": "Hemp Leaf",
   "item.hemp.hemp_seeds": "Hemp Seeds",
   "item.hemp.wet_hemp": "Wet Hemp",
-  "item.hemp.dry_hemp": "Dried Hemp",
+  "item.hemp.hemp": "Dried Hemp",
   "item.hemp.grinder": "Grinder",
   "item.hemp.joint": "Joint",
+  "item.hemp.bong": "Bong",
 
-  "item.hemp.joint.tooltip.shift": "Smoke me!",
-  "item.hemp.joint.tooltip": "Press shift for more info",
+  "item.hemp.tooltip.shift": "Smoke me!",
+  "item.hemp.tooltip": "Press shift for more info",
 
-  "item.hemp.joint.message.swimming": "You can't smoke here, how high are you?",
+  "message.hemp.underwater": "You can't smoke here, how high are you?",
 
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
@@ -19,9 +20,11 @@
   "block.hemp.hemp_soil": "Hemp Soil",
   "block.hemp.hemp_crop": "Hemp Crop",
   "block.hemp.rolling_tray": "Rolling Tray",
+  "block.hemp.stash_jar": "Stash Jar",
 
   "effect.hemp.stoned": "Stoned",
   "effect.hemp.high": "High",
+  "effect.hemp.bad_trip": "Bad Trip",
 
   "entity.minecraft.villager.hemp_farmer": "Hemp Farmer"
 }

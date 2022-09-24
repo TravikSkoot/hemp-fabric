@@ -20,7 +20,7 @@ public class HempStatusEffect {
             new HighStatusEffect(StatusEffectCategory.BENEFICIAL, 0x197a17));
 
     public static final StatusEffect BAD_TRIP = registerStatusEffect("bad_trip",
-            new BadTripStatusEffect(StatusEffectCategory.BENEFICIAL, 0x197a17));
+            new BadTripStatusEffect(StatusEffectCategory.BENEFICIAL, 0x0a350a));
 
     // register the effect
     private static StatusEffect registerStatusEffect(String name, StatusEffect effect) {

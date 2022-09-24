@@ -18,8 +18,8 @@ public class StonedStatusEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5200, amplifier, false, false, false));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 5200, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 5210, amplifier,false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 5210, amplifier, false, false, false));
         super.applyUpdateEffect(entity, amplifier);
     }
 

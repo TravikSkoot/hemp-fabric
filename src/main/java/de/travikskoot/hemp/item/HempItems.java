@@ -2,6 +2,8 @@ package de.travikskoot.hemp.item;
 
 import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.block.HempBlocks;
+import de.travikskoot.hemp.item.custom.BongItem;
+import de.travikskoot.hemp.item.custom.GrinderItem;
 import de.travikskoot.hemp.item.custom.JointItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.AliasedBlockItem;
@@ -22,7 +24,16 @@ public class HempItems {
             new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings().group(HempItemGroup.HEMP)));
 
     public static final Item GRINDER = registerItem("grinder",
+            new GrinderItem(new FabricItemSettings().group(HempItemGroup.HEMP)));
+
+    public static final Item HEMP = registerItem("hemp",
             new Item(new FabricItemSettings().group(HempItemGroup.HEMP)));
+
+    public static final Item WET_HEMP = registerItem("wet_hemp",
+            new Item(new FabricItemSettings().group(HempItemGroup.HEMP)));
+
+    public static final Item BONG = registerItem("bong",
+            new BongItem(new FabricItemSettings().group(HempItemGroup.HEMP)));
 
     //Item Register
     private static Item registerItem(String name, Item item) {

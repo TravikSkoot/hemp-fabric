@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "hemp:item/dry_hemp"
+    "layer0": "hemp:item/hemp"
   }
 }

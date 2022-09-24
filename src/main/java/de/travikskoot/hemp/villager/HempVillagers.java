@@ -50,7 +50,8 @@ public class HempVillagers {
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new ItemStack(Items.EMERALD, 1),
-                    new ItemStack(HempItems.HEMP_LEAF, 3),
+                    new ItemStack(Items.IRON_INGOT, 2),
+                    new ItemStack(HempItems.JOINT, 1),
                     6,
                     2,
                     0.05f
