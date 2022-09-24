@@ -1,8 +1,10 @@
 package de.travikskoot.hemp;
 
 import de.travikskoot.hemp.block.HempBlocks;
+import de.travikskoot.hemp.block.entity.HempBlockEntities;
 import de.travikskoot.hemp.item.HempItems;
 import de.travikskoot.hemp.effect.HempStatusEffect;
+import de.travikskoot.hemp.screen.HempScreenHandlers;
 import de.travikskoot.hemp.util.HempLootTableModifier;
 import de.travikskoot.hemp.villager.HempVillagers;
 import net.fabricmc.api.ModInitializer;
@@ -22,11 +24,17 @@ public class Hemp implements ModInitializer {
 
         HempItems.registerHempItems();
         HempBlocks.registerHempBlocks();
+
         HempStatusEffect.registerHempEffects();
+
         HempVillagers.registerHempVillagers();
         HempVillagers.registerHempTrades();
+
         HempLootTableModifier.registerLootTables();
         HempLootTableModifier.modifyLootTables();
+
+        HempBlockEntities.registerHempBlockEntities();
+        HempScreenHandlers.registerAllScreenHandlers();
 
     }
 }
