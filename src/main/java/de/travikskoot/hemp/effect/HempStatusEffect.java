@@ -8,8 +8,9 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class HempStatusEffect {
 
@@ -24,7 +25,7 @@ public class HempStatusEffect {
 
     // register the effect
     private static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.register(Registry.STATUS_EFFECT, new Identifier(Hemp.MOD_ID, name), effect);
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(Hemp.MOD_ID, name), effect);
     }
 
     public static void registerHempEffects() {

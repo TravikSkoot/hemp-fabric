@@ -1,0 +1,11 @@
+{
+    "name": "Hemp Leaf",
+    "icon": "hemp_lore:hemp_leaf",
+    "category": "hemp:items",
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": ""
+        }
+    ]
+}

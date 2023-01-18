@@ -5,15 +5,16 @@ import de.travikskoot.hemp.block.custom.*;
 import de.travikskoot.hemp.item.HempItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.world.BlockView;
+import net.minecraft.registry.Registry;
 
 public class HempBlocks {
 
@@ -27,30 +28,29 @@ public class HempBlocks {
     public static final Block GROW_BOX = registerBlock("grow_box",
             new GrowBoxBlock(FabricBlockSettings.of(Material.SHULKER_BOX).strength(1f).nonOpaque()), HempItemGroup.HEMP);
 
-    public static final Block ROLLING_TRAY = registerBlock("rolling_tray",
-            new RollingTrayBlock(FabricBlockSettings.of(Material.METAL).strength(2f).nonOpaque().requiresTool()), HempItemGroup.HEMP);
+    public static final Block STASH_JAR = registerBlock("stash_jar",
+            new StashJarBlock(FabricBlockSettings.of(Material.GLASS).strength(2f).nonOpaque().sounds(BlockSoundGroup.GLASS)), HempItemGroup.HEMP);
 
     public static final Block HEMP_CROP = registerBlockWithoutItem("hemp_crop",
             new HempCropBlock(FabricBlockSettings.of(Material.PLANT).nonOpaque().noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)));
 
-    //Block Register
+
+
     private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(Registry.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
     }
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
-        return Registry.register(Registry.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
     }
 
-    //Block Item Register
     private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
-        return Registry.register(Registry.ITEM, new Identifier(Hemp.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(tab)));
+        return Registry.register(Registries.ITEM, new Identifier(Hemp.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
     }
 
-    //Console Output
     public static void registerHempBlocks() {
         Hemp.LOGGER.debug("Registering Mod Blocks for " + Hemp.MOD_ID);
     }

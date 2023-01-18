@@ -22,9 +22,12 @@ public class Hemp implements ModInitializer {
 
         HempItems.registerHempItems();
         HempBlocks.registerHempBlocks();
+
         HempStatusEffect.registerHempEffects();
+
         HempVillagers.registerHempVillagers();
         HempVillagers.registerHempTrades();
+
         HempLootTableModifier.registerLootTables();
         HempLootTableModifier.modifyLootTables();
 

@@ -9,35 +9,36 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 public class HempItems {
 
     //Instance Creation of Item
     public static final Item HEMP_LEAF = registerItem("hemp_leaf",
-            new Item(new FabricItemSettings().group(HempItemGroup.HEMP)
+            new Item(new FabricItemSettings()
                     .food(new FoodComponent.Builder().hunger(4).saturationModifier(4f).build())));
     public static final Item JOINT = registerItem("joint",
-            new JointItem(new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new JointItem(new FabricItemSettings()));
     public static final Item HEMP_SEEDS = registerItem("hemp_seeds",
-            new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
 
     public static final Item GRINDER = registerItem("grinder",
-            new GrinderItem(new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new GrinderItem(new FabricItemSettings()));
 
     public static final Item HEMP = registerItem("hemp",
-            new Item(new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new Item(new FabricItemSettings()));
 
     public static final Item WET_HEMP = registerItem("wet_hemp",
-            new Item(new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new Item(new FabricItemSettings()));
 
     public static final Item BONG = registerItem("bong",
-            new BongItem(new FabricItemSettings().group(HempItemGroup.HEMP)));
+            new BongItem(new FabricItemSettings()));
 
     //Item Register
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(Hemp.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, new Identifier(Hemp.MOD_ID, name), item);
     }
 
     //Console Output

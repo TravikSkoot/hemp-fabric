@@ -1,6 +1,5 @@
 package de.travikskoot.hemp.client;
 
-import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.block.HempBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -13,5 +12,6 @@ public class HempClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(HempBlocks.HEMP_CROP, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(HempBlocks.STASH_JAR, RenderLayer.getCutout());
     }
 }

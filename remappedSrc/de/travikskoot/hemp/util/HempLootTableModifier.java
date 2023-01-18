@@ -32,9 +32,9 @@ public class HempLootTableModifier {
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (VILLAGE_DESERT_HOUSE_CHEST.equals(id) || VILLAGE_PLAINS_HOUSE_CHEST.equals(id)
+            if (source.isBuiltin() && (VILLAGE_DESERT_HOUSE_CHEST.equals(id) || VILLAGE_PLAINS_HOUSE_CHEST.equals(id)
                     || VILLAGE_SAVANNA_HOUSE_CHEST.equals(id) || VILLAGE_TAIGA_HOUSE_CHEST.equals(id)
-                    || VILLAGE_SNOWY_HOUSE_CHEST.equals(id)) {
+                    || VILLAGE_SNOWY_HOUSE_CHEST.equals(id))) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(UniformLootNumberProvider.create(1, 3))
                         .bonusRolls(ConstantLootNumberProvider.create(0))

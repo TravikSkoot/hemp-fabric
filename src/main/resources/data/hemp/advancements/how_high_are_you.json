@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "hemp:hemp_leaf"
+    },
+    "title": {
+      "translate": "advancements.hemp.how_high_are_you.title"
+    },
+    "description": {
+      "translate": "advancements.hemp.how_high_are_you.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "how_high_are_you": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hemp:hemp_leaf"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hemp:highest_in_the_room"
+}
