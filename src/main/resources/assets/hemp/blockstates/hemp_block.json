@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model":  "hemp:/block/hemp_block" }
+    "": { "model":  "hemp:block/hemp_block" }
   }
 }

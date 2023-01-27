@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "hemp:/block/rolling_tray"
+      "model": "hemp:block/rolling_tray"
     },
     "facing=south": {
-      "model": "hemp:/block/rolling_tray",
+      "model": "hemp:block/rolling_tray",
       "y": 180
     },
     "facing=east": {
-      "model": "hemp:/block/rolling_tray",
+      "model": "hemp:block/rolling_tray",
       "y": 90
     },
     "facing=west": {
-      "model": "hemp:/block/rolling_tray",
+      "model": "hemp:block/rolling_tray",
       "y": 270
     }
   }

@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model":  "hemp:/block/stash_jar" }
+    "": { "model":  "hemp:block/stash_jar" }
   }
 }

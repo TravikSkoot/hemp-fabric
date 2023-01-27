@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "hemp:/block/wet_hemp_block_top",
-    "side": "hemp:/block/wet_hemp_block_side"
+    "end": "hemp:block/wet_hemp_block_top",
+    "side": "hemp:block/wet_hemp_block_side"
   }
 }

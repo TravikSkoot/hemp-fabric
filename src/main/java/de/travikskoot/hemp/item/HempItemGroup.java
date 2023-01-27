@@ -11,14 +11,10 @@ public class HempItemGroup {
 
     public static final ItemGroup HEMP = FabricItemGroup.builder(new Identifier(Hemp.MOD_ID, "hemp"))
             .displayName(Text.literal("Hemp"))
-            .icon(() -> new ItemStack(HempItems.HEMP_LEAF))
-            .entries(((enabledFeatures, entries, operatorEnabled) -> {
-                entries.add(HempItems.HEMP_LEAF);
-                entries.add(HempItems.HEMP_SEEDS);
-                entries.add(HempItems.HEMP);
-                entries.add(HempItems.WET_HEMP);
-                entries.add(HempItems.JOINT);
-                entries.add(HempItems.BONG);
-                entries.add(HempItems.GRINDER);
-            })).build();
+            .icon(() -> new ItemStack(HempItems.HEMP_LEAF)).build();
+
+    //Console Output
+    public static void registerHempItemGroup() {
+        Hemp.LOGGER.debug("Registering Mod ItemGroup for " + Hemp.MOD_ID);
+    }
 }
