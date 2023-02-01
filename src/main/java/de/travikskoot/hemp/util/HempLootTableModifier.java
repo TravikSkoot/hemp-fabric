@@ -17,16 +17,12 @@ public class HempLootTableModifier {
 
     private static final Identifier VILLAGE_DESERT_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_desert_house");
-
     private static final Identifier VILLAGE_PLAINS_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_plains_house");
-
     private static final Identifier VILLAGE_SAVANNA_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_savanna_house");
-
     private static final Identifier VILLAGE_TAIGA_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_taiga_house");
-
     private static final Identifier VILLAGE_SNOWY_HOUSE_CHEST = new Identifier("minecraft",
             "chests/village/village_snowy_house");
 
