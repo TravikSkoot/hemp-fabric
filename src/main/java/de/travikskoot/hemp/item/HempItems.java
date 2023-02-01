@@ -11,8 +11,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 
 public class HempItems {
 
@@ -53,15 +53,17 @@ public class HempItems {
     private static void addItemsToItemGroup() {
         //vanilla itemgroups
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_LEAF);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, HEMP_LEAF);
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_SEEDS);
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP);
         addToItemGroup(ItemGroups.INGREDIENTS, WET_HEMP);
-        addToItemGroup(ItemGroups.INGREDIENTS, JOINT);
-        addToItemGroup(ItemGroups.INGREDIENTS, BONG);
-        addToItemGroup(ItemGroups.INGREDIENTS, GRINDER);
+        addToItemGroup(ItemGroups.TOOLS, JOINT);
+        addToItemGroup(ItemGroups.TOOLS, BONG);
+        addToItemGroup(ItemGroups.TOOLS, GRINDER);
         addToItemGroup(ItemGroups.INGREDIENTS, BROWNIE);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, BROWNIE);
 
-        //hemp itemgroups
+        //hemp itemgroup
         addToItemGroup(HempItemGroup.HEMP, HEMP_LEAF);
         addToItemGroup(HempItemGroup.HEMP, HEMP_SEEDS);
         addToItemGroup(HempItemGroup.HEMP, HEMP);

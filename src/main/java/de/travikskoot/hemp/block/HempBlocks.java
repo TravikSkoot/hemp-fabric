@@ -12,6 +12,7 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -54,7 +55,27 @@ public class HempBlocks {
         return item;
     }
 
+    private static void addBlocksToItemGroup() {
+        //vanilla itemgroups
+        addToItemGroup(ItemGroups.NATURAL, HEMP_BLOCK);
+        addToItemGroup(ItemGroups.NATURAL, WET_HEMP_BLOCK);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, GROW_BOX);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, STASH_JAR);
+        addToItemGroup(ItemGroups.FUNCTIONAL, STASH_JAR);
+
+        //hemp itemgroups
+        addToItemGroup(HempItemGroup.HEMP, HEMP_BLOCK);
+        addToItemGroup(HempItemGroup.HEMP, WET_HEMP_BLOCK);
+        addToItemGroup(HempItemGroup.HEMP, GROW_BOX);
+        addToItemGroup(HempItemGroup.HEMP, STASH_JAR);
+    }
+
+    private static void addToItemGroup(ItemGroup group, Block block) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(block));
+    }
+
     public static void registerHempBlocks() {
         Hemp.LOGGER.debug("Registering Mod Blocks for " + Hemp.MOD_ID);
+        addBlocksToItemGroup();
     }
 }

@@ -16,5 +16,6 @@ public class HempItemGroup {
     //Console Output
     public static void registerHempItemGroup() {
         Hemp.LOGGER.debug("Registering Mod ItemGroup for " + Hemp.MOD_ID);
+
     }
 }
