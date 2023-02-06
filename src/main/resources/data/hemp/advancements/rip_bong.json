@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "hemp:bong"
+    },
+    "title": {
+      "translate": "advancements.hemp.rip_bong.title"
+    },
+    "description": {
+      "translate": "advancements.hemp.rip_bong.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hemp:root",
+  "criteria": {
+    "bong": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "item": {
+          "items": [
+            "hemp:bong"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bong"
+    ]
+  ]
+}
