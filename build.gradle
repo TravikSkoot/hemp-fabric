@@ -3,6 +3,14 @@ plugins {
     id 'maven-publish'
 }
 
+loom {
+    runs {
+        client {
+            programArgs "--username", "TravikSkoot", "--uuid" , "f0bdba3bb055462fb0c123aa9efe12a1"
+        }
+    }
+}
+
 version = project.mod_version
 group = project.maven_group
 

@@ -34,6 +34,7 @@ public class BongItem extends Item {
                 user.playSound(SoundEvents.BLOCK_SMOKER_SMOKE, SoundCategory.PLAYERS, 2, 1);
                 user.playSound(SoundEvents.BLOCK_BUBBLE_COLUMN_WHIRLPOOL_AMBIENT, SoundCategory.PLAYERS, 1, 1);
                 user.addStatusEffect(new StatusEffectInstance(HempStatusEffect.STONED, 3600));
+                user.getStackInHand(hand).damage(1, user, p -> p.sendToolBreakStatus(hand));
 
                 ServerWorld serverWorld = (ServerWorld)world;
                 if (user.getHorizontalFacing() == Direction.NORTH) {

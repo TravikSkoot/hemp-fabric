@@ -34,6 +34,7 @@ public class JointItem extends Item {
             if(!user.isSubmergedInWater()) {
                 user.playSound(SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.PLAYERS, 1, 1);
                 user.addStatusEffect(new StatusEffectInstance(HempStatusEffect.STONED, 3600));
+                user.getStackInHand(hand).damage(1, user, p -> p.sendToolBreakStatus(hand));
 
                 ServerWorld serverWorld = (ServerWorld)world;
                 if (user.getHorizontalFacing() == Direction.NORTH) {

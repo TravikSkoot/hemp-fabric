@@ -18,14 +18,15 @@
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
   "block.hemp.grow_box": "Grow Box",
-  "block.hemp.hemp_soil": "Hemp Soil",
   "block.hemp.hemp_crop": "Hemp Crop",
-  "block.hemp.rolling_tray": "Rolling Tray",
   "block.hemp.stash_jar": "Stash Jar",
 
   "effect.hemp.stoned": "Stoned",
   "effect.hemp.high": "High",
   "effect.hemp.bad_trip": "Bad Trip",
+
+  "advancements.hemp.root.title": "Hemp Lore",
+  "advancements.hemp.root.description": "You’re my best bud!",
 
   "advancements.hemp.how_high_are_you.title": "How high are you?",
   "advancements.hemp.how_high_are_you.descr": "Did you really think that you could smoke underwater?",

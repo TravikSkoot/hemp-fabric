@@ -1,6 +1,7 @@
 package de.travikskoot.hemp;
 
 import de.travikskoot.hemp.block.HempBlocks;
+import de.travikskoot.hemp.item.HempItemGroup;
 import de.travikskoot.hemp.item.HempItems;
 import de.travikskoot.hemp.effect.HempStatusEffect;
 import de.travikskoot.hemp.util.HempLootTableModifier;
@@ -21,6 +22,7 @@ public class Hemp implements ModInitializer {
         LOGGER.info("Initializing " + MOD_ID);
 
         HempItems.registerHempItems();
+        HempItemGroup.registerHempItemGroup();
         HempBlocks.registerHempBlocks();
 
         HempStatusEffect.registerHempEffects();

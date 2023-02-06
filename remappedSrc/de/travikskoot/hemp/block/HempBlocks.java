@@ -4,6 +4,7 @@ import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.block.custom.*;
 import de.travikskoot.hemp.item.HempItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -11,10 +12,11 @@ import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.registry.Registry;
 
 public class HempBlocks {
 
@@ -41,17 +43,39 @@ public class HempBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
     }
 
-    private static Block registerBlock(String name, Block block, ItemGroup tab) {
-        registerBlockItem(name, block, tab);
+    private static Block registerBlock(String name, Block block, ItemGroup group) {
+        registerBlockItem(name, block, group);
         return Registry.register(Registries.BLOCK, new Identifier(Hemp.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
-        return Registry.register(Registries.ITEM, new Identifier(Hemp.MOD_ID, name),
+    private static Item registerBlockItem(String name, Block block, ItemGroup group) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(Hemp.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+        return item;
+    }
+
+    private static void addBlocksToItemGroup() {
+        //vanilla itemgroups
+        addToItemGroup(ItemGroups.NATURAL, HEMP_BLOCK);
+        addToItemGroup(ItemGroups.NATURAL, WET_HEMP_BLOCK);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, GROW_BOX);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, STASH_JAR);
+        addToItemGroup(ItemGroups.FUNCTIONAL, STASH_JAR);
+
+        //hemp itemgroups
+        addToItemGroup(HempItemGroup.HEMP, HEMP_BLOCK);
+        addToItemGroup(HempItemGroup.HEMP, WET_HEMP_BLOCK);
+        addToItemGroup(HempItemGroup.HEMP, GROW_BOX);
+        addToItemGroup(HempItemGroup.HEMP, STASH_JAR);
+    }
+
+    private static void addToItemGroup(ItemGroup group, Block block) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(block));
     }
 
     public static void registerHempBlocks() {
         Hemp.LOGGER.debug("Registering Mod Blocks for " + Hemp.MOD_ID);
+        addBlocksToItemGroup();
     }
 }

@@ -13,5 +13,6 @@ public class HempClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(HempBlocks.HEMP_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(HempBlocks.STASH_JAR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(HempBlocks.GROW_BOX, RenderLayer.getCutout());
     }
 }
