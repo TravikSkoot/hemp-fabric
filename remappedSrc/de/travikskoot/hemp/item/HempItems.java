@@ -26,17 +26,17 @@ public class HempItems {
                             .statusEffect(new StatusEffectInstance(HempStatusEffect.STONED, 200, 0, false, true), 0.9f)
                             .build())));
     public static final Item JOINT = registerItem("joint",
-            new JointItem(new FabricItemSettings()));
+            new JointItem(new FabricItemSettings().maxDamage(10)));
     public static final Item HEMP_SEEDS = registerItem("hemp_seeds",
             new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
     public static final Item GRINDER = registerItem("grinder",
             new GrinderItem(new FabricItemSettings()));
-    public static final Item HEMP = registerItem("hemp",
+    public static final Item DRY_HEMP = registerItem("dry_hemp",
             new Item(new FabricItemSettings()));
     public static final Item WET_HEMP = registerItem("wet_hemp",
             new Item(new FabricItemSettings()));
     public static final Item BONG = registerItem("bong",
-            new BongItem(new FabricItemSettings()));
+            new BongItem(new FabricItemSettings().maxDamage(3)));
     public static final Item BROWNIE = registerItem("brownie",
                 new Item(new FabricItemSettings()
                         .food(new FoodComponent.Builder()
@@ -55,7 +55,7 @@ public class HempItems {
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_LEAF);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, HEMP_LEAF);
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_SEEDS);
-        addToItemGroup(ItemGroups.INGREDIENTS, HEMP);
+        addToItemGroup(ItemGroups.INGREDIENTS, DRY_HEMP);
         addToItemGroup(ItemGroups.INGREDIENTS, WET_HEMP);
         addToItemGroup(ItemGroups.TOOLS, JOINT);
         addToItemGroup(ItemGroups.TOOLS, BONG);
@@ -66,7 +66,7 @@ public class HempItems {
         //hemp itemgroup
         addToItemGroup(HempItemGroup.HEMP, HEMP_LEAF);
         addToItemGroup(HempItemGroup.HEMP, HEMP_SEEDS);
-        addToItemGroup(HempItemGroup.HEMP, HEMP);
+        addToItemGroup(HempItemGroup.HEMP, DRY_HEMP);
         addToItemGroup(HempItemGroup.HEMP, WET_HEMP);
         addToItemGroup(HempItemGroup.HEMP, JOINT);
         addToItemGroup(HempItemGroup.HEMP, BONG);

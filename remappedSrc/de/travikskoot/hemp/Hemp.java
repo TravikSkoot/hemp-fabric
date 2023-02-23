@@ -6,6 +6,7 @@ import de.travikskoot.hemp.item.HempItems;
 import de.travikskoot.hemp.effect.HempStatusEffect;
 import de.travikskoot.hemp.util.HempLootTableModifier;
 import de.travikskoot.hemp.villager.HempVillagers;
+import de.travikskoot.hemp.world.gen.HempWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +33,8 @@ public class Hemp implements ModInitializer {
 
         HempLootTableModifier.registerLootTables();
         HempLootTableModifier.modifyLootTables();
+
+        HempWorldGen.generateWorldGen();
 
     }
 }

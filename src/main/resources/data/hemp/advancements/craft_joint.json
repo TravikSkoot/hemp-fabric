@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "hemp:root",
+  "parent": "hemp:obtain_dry_hemp",
   "criteria": {
     "joint": {
       "trigger": "minecraft:inventory_changed",

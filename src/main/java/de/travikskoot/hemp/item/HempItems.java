@@ -31,7 +31,7 @@ public class HempItems {
             new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
     public static final Item GRINDER = registerItem("grinder",
             new GrinderItem(new FabricItemSettings()));
-    public static final Item HEMP = registerItem("hemp",
+    public static final Item DRY_HEMP = registerItem("dry_hemp",
             new Item(new FabricItemSettings()));
     public static final Item WET_HEMP = registerItem("wet_hemp",
             new Item(new FabricItemSettings()));
@@ -55,7 +55,7 @@ public class HempItems {
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_LEAF);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, HEMP_LEAF);
         addToItemGroup(ItemGroups.INGREDIENTS, HEMP_SEEDS);
-        addToItemGroup(ItemGroups.INGREDIENTS, HEMP);
+        addToItemGroup(ItemGroups.INGREDIENTS, DRY_HEMP);
         addToItemGroup(ItemGroups.INGREDIENTS, WET_HEMP);
         addToItemGroup(ItemGroups.TOOLS, JOINT);
         addToItemGroup(ItemGroups.TOOLS, BONG);
@@ -66,7 +66,7 @@ public class HempItems {
         //hemp itemgroup
         addToItemGroup(HempItemGroup.HEMP, HEMP_LEAF);
         addToItemGroup(HempItemGroup.HEMP, HEMP_SEEDS);
-        addToItemGroup(HempItemGroup.HEMP, HEMP);
+        addToItemGroup(HempItemGroup.HEMP, DRY_HEMP);
         addToItemGroup(HempItemGroup.HEMP, WET_HEMP);
         addToItemGroup(HempItemGroup.HEMP, JOINT);
         addToItemGroup(HempItemGroup.HEMP, BONG);

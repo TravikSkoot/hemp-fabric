@@ -1,0 +1,37 @@
+{
+	"display": {
+		"icon": {
+			"item": "hemp:dry_hemp"
+		},
+		"title": {
+			"translate": "advancements.hemp.obtain_dry_hemp.title"
+		},
+		"description": {
+			"translate": "advancements.hemp.obtain_dry_hemp.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "hemp:harvest_wet_hemp",
+	"criteria": {
+		"dry_hemp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"hemp:dry_hemp"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"dry_hemp"
+		]
+	]
+}

@@ -11,11 +11,11 @@ import net.minecraft.world.World;
 public class HempBlock extends PillarBlock {
     public HempBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AXIS, Direction.Axis.Y));
+        this.setDefaultState(this.stateManager.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
 
     @Override
     public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        entity.handleFallDamage(fallDistance, 0.2f, DamageSource.FALL);
+        entity.handleFallDamage(fallDistance, 0.2f, world.getDamageSources().fall());
     }
 }

@@ -19,7 +19,7 @@ public class WetHempBlock extends PillarBlock {
 
     @Override
     public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        entity.handleFallDamage(fallDistance, 0.2f, DamageSource.FALL);
+        entity.handleFallDamage(fallDistance, 0.2f, world.getDamageSources().fall());
     }
 
     //Water Particles like the Sponge Block

@@ -1,0 +1,37 @@
+{
+	"display": {
+		"icon": {
+			"item": "hemp:wet_hemp"
+		},
+		"title": {
+			"translate": "advancements.hemp.harvest_wet_hemp.title"
+		},
+		"description": {
+			"translate": "advancements.hemp.harvest_wet_hemp.description"
+		},
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": false
+	},
+	"parent": "hemp:root",
+	"criteria": {
+		"wet_hemp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"hemp:wet_hemp"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"wet_hemp"
+		]
+	]
+}

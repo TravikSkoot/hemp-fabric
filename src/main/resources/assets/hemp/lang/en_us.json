@@ -4,7 +4,7 @@
   "item.hemp.hemp_leaf": "Hemp Leaf",
   "item.hemp.hemp_seeds": "Hemp Seeds",
   "item.hemp.wet_hemp": "Wet Hemp",
-  "item.hemp.hemp": "Dried Hemp",
+  "item.hemp.dry_hemp": "Dried Hemp",
   "item.hemp.grinder": "Grinder",
   "item.hemp.joint": "Joint",
   "item.hemp.bong": "Bong",
@@ -17,7 +17,6 @@
 
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
-  "block.hemp.grow_box": "Grow Box",
   "block.hemp.hemp_crop": "Hemp Crop",
   "block.hemp.stash_jar": "Stash Jar",
 
@@ -33,6 +32,12 @@
 
   "advancements.hemp.rip_bong.title": "Watch me rip, now watch me nap nap",
   "advancements.hemp.rip_bong.description": "Rip a bong",
+
+  "advancements.hemp.obtain_dry_hemp.title": "You’re ganja have a good time",
+  "advancements.hemp.obtain_dry_hemp.description": "Smelt your wet hemp to get dried hemp",
+
+  "advancements.hemp.harvest_wet_hemp.title": "Growing like a weed",
+  "advancements.hemp.harvest_wet_hemp.description": "Harvest wet hemp",
 
   "entity.minecraft.villager.hemp_farmer": "Hemp Farmer"
 }
