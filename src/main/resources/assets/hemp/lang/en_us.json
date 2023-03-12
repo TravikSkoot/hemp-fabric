@@ -14,6 +14,7 @@
   "item.hemp.tooltip": "Press shift for more info",
 
   "message.hemp.underwater": "You can't smoke here, how high are you?",
+  "message.hemp.no_hemp": "You don't have any hemp that can be grinded!",
 
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",

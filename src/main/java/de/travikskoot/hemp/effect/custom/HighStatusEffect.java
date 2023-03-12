@@ -22,6 +22,7 @@ public class HighStatusEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 5210, amplifier, false, false, false));
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 5210, amplifier, false, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 5210, amplifier, false, false, false));
         super.applyUpdateEffect(entity, amplifier);
     }
 
@@ -30,6 +31,7 @@ public class HighStatusEffect extends StatusEffect {
         if (!entity.hasStatusEffect(HempStatusEffect.HIGH)) {
             entity.removeStatusEffect(StatusEffects.SPEED);
             entity.removeStatusEffect(StatusEffects.WEAKNESS);
+            entity.removeStatusEffect(StatusEffects.REGENERATION);
         }
         super.onRemoved(entity, attributes, amplifier);
     }
