@@ -60,7 +60,7 @@ public class JointItem extends Item {
                 }
                 // TODO Green View
             } else {
-                user.sendMessage(Text.translatable("message.hemp.underwater").formatted(Formatting.RED));
+                user.sendMessage(Text.translatable("message.hemp.underwater").formatted(Formatting.RED), true);
             }
         }
 

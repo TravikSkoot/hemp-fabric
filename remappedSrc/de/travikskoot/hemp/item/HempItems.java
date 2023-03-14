@@ -30,7 +30,7 @@ public class HempItems {
     public static final Item HEMP_SEEDS = registerItem("hemp_seeds",
             new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
     public static final Item GRINDER = registerItem("grinder",
-            new GrinderItem(new FabricItemSettings()));
+            new GrinderItem(new FabricItemSettings().maxDamage(420)));
     public static final Item DRY_HEMP = registerItem("dry_hemp",
             new Item(new FabricItemSettings()));
     public static final Item WET_HEMP = registerItem("wet_hemp",
