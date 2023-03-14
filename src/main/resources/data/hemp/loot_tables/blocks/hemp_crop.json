@@ -27,6 +27,19 @@
             },
             {
               "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "hemp:hemp_crop",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "name": "hemp:wet_hemp"
+            },
+            {
+              "type": "minecraft:item",
               "name": "hemp:hemp_seeds"
             }
           ]
