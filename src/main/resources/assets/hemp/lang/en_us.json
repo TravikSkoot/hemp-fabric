@@ -14,7 +14,7 @@
   "item.hemp.tooltip": "Press shift for more info",
 
   "message.hemp.underwater": "You can't smoke here, how high are you?",
-  "message.hemp.no_hemp": "You don't have any hemp that can be grinded!",
+  "message.hemp.no_hemp": "You don't have enough dried hemp in your inventory that can be grinded!",
 
   "block.hemp.hemp_block": "Hemp Block",
   "block.hemp.wet_hemp_block": "Wet Hemp Block",
@@ -35,7 +35,7 @@
   "advancements.hemp.rip_bong.description": "Rip a bong",
 
   "advancements.hemp.obtain_dry_hemp.title": "You’re ganja have a good time",
-  "advancements.hemp.obtain_dry_hemp.description": "Smelt your wet hemp to get dried hemp",
+  "advancements.hemp.obtain_dry_hemp.description": "Put the wet hemp in the oven to get dried hemp",
 
   "advancements.hemp.harvest_wet_hemp.title": "Growing like a weed",
   "advancements.hemp.harvest_wet_hemp.description": "Harvest wet hemp",

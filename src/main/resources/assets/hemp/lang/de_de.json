@@ -1,5 +1,5 @@
 {
-  "itemGroup.hemp.hemp": "Hemp",
+  "itemGroup.hemp.hemp": "Hanf",
 
   "item.hemp.hemp_leaf": "Hanfblatt",
   "item.hemp.hemp_seeds": "Hanfsamen",
@@ -7,14 +7,38 @@
   "item.hemp.dry_hemp": "Getrocknetes Hanf",
   "item.hemp.grinder": "Grinder",
   "item.hemp.joint": "Joint",
+  "item.hemp.bong": "Bong",
+  "item.hemp.brownie": "Brownie",
 
-  "item.hemp.joint.tooltip": "Rauch mich!",
+  "item.hemp.tooltip.shift": "Rauch mich!",
+  "item.hemp.tooltip": "Drücke die Umschalttaste für mehr Infos",
 
-  "item.hemp.joint.message.swimming": "Du kannst hier nicht rauchen, wie high bist du?",
+  "message.hemp.underwater": "Du kannst hier nicht rauchen, wie high bist du?",
+  "message.hemp.no_hemp": "Du hast nicht genug getrockneten Hanf in deinem Inventar, der gemahlen werden kann!",
 
-  "block.hemp.hemp_block": "Hanfblock",
-  "block.hemp.wet_hemp_block": "Nasser Hanfblock",
+  "block.hemp.hemp_block": "Hanf Block",
+  "block.hemp.wet_hemp_block": "Nasser Hanf Block",
+  "block.hemp.hemp_crop": "Hanfpflanze",
+  "block.hemp.stash_jar": "Vorratsglas",
 
-  "effect.hemp.stoned": "Stoned",
-  "effect.hemp.high": "High"
+  "effect.hemp.stoned": "Bekifft",
+  "effect.hemp.high": "High",
+  "effect.hemp.bad_trip": "Schlechter Trip",
+
+  "advancements.hemp.root.title": "Hanfkunde",
+  "advancements.hemp.root.description": "Besorge ein Hanfblatt",
+
+  "advancements.hemp.craft_joint.title": "Dreh einfach weiter",
+  "advancements.hemp.craft_joint.description": "Drehe dir einen Joint",
+
+  "advancements.hemp.rip_bong.title": "Hat jemand was zu trinken?",
+  "advancements.hemp.rip_bong.description": "Zieh dir 'ne Bong rein",
+
+  "advancements.hemp.obtain_dry_hemp.title": "Dir wird es gras gut gehen",
+  "advancements.hemp.obtain_dry_hemp.description": "Gib den nassen Hanf in den Ofen, um getrockneten Hanf zu erhalten",
+
+  "advancements.hemp.harvest_wet_hemp.title": "Wächst wie Unkraut",
+  "advancements.hemp.harvest_wet_hemp.description": "Nassen Hanf ernten",
+
+  "entity.minecraft.villager.hemp_farmer": "Hanf Bauer"
 }
