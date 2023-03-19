@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 public class HempItemGroup {
 
     public static final ItemGroup HEMP = FabricItemGroup.builder(new Identifier(Hemp.MOD_ID, "hemp"))
-            .displayName(Text.literal("Hemp"))
+            .displayName(Text.translatable("itemGroup.hemp.hemp"))
             .icon(() -> new ItemStack(HempItems.HEMP_LEAF)).build();
 
     //Console Output
