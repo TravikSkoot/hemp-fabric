@@ -1,81 +1,67 @@
 {
   "type": "minecraft:block",
-  "functions": [
-    {
-      "function": "minecraft:explosion_decay"
-    }
-  ],
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1,
+      "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
+          "type": "minecraft:item",
+          "name": "hemp:hemp_leaf",
+          "conditions": [
             {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "block": "hemp:hemp_crop",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "7"
-                  }
-                }
-              ],
-              "name": "hemp:hemp_leaf"
-            },
-            {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "block": "hemp:hemp_crop",
-                  "condition": "minecraft:block_state_property",
-                  "properties": {
-                    "age": "7"
-                  }
-                }
-              ],
-              "name": "hemp:wet_hemp"
-            },
-            {
-              "type": "minecraft:item",
-              "name": "hemp:hemp_seeds"
+              "condition": "minecraft:block_state_property",
+              "block": "hemp:hemp_crop",
+              "properties": {
+                "age": "7"
+              }
             }
           ]
         }
-      ],
-      "rolls": 1.0
+      ]
     },
     {
-      "bonus_rolls": 0.0,
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hemp:wet_hemp",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "hemp:hemp_crop",
+              "properties": {
+                "age": "7"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hemp:hemp_seeds"
+        }
+      ],
       "conditions": [
         {
-          "block": "hemp:hemp_crop",
           "condition": "minecraft:block_state_property",
+          "block": "hemp:hemp_crop",
           "properties": {
             "age": "7"
           }
         }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "enchantment": "minecraft:fortune",
-              "formula": "minecraft:binomial_with_bonus_count",
-              "function": "minecraft:apply_bonus",
-              "parameters": {
-                "extra": 3,
-                "probability": 0.5714286
-              }
-            }
-          ],
-          "name": "hemp:hemp_seeds"
-        }
-      ],
-      "rolls": 1.0
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
     }
   ]
 }
