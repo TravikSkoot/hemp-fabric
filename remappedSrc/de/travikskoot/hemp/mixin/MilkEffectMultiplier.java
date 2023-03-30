@@ -14,15 +14,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MilkBucketItem.class)
 public class MilkEffectMultiplier {
-    @Inject(at = @At("HEAD"), method = "finishUsing")
-    private void injectHempMilkEffectMultiplier(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
-        if (!world.isClient) {
-            if(user.hasStatusEffect(HempStatusEffect.STONED)) {
-                //TODO Override removing all effects
-                user.addStatusEffect(new StatusEffectInstance(HempStatusEffect.STONED, 3600, 2));
-            }
+    @Inject(at = @At("HEAD"), method = "finishUsing", cancellable = true)
+    public void finishUsing(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
+
+        if (!world.isClient && !user.hasStatusEffect(HempStatusEffect.STONED)) {
+            user.clearStatusEffects();
         }
-        //TODO andere effekte nicht vergessen ;)
     }
 }
 
