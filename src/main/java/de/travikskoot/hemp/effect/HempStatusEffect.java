@@ -4,13 +4,11 @@ import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.effect.custom.BadTripStatusEffect;
 import de.travikskoot.hemp.effect.custom.HighStatusEffect;
 import de.travikskoot.hemp.effect.custom.StonedStatusEffect;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 
 public class HempStatusEffect {
 
