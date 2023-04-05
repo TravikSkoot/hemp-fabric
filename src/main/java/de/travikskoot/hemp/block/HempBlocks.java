@@ -23,10 +23,10 @@ public class HempBlocks {
 
     //Instance Creation of Block
     public static final Block HEMP_BLOCK = registerBlock("hemp_block",
-            new HempBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, MapColor.GREEN).strength(0.5f).sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
+            new HempBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).strength(0.5f).sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
 
     public static final Block WET_HEMP_BLOCK = registerBlock("wet_hemp_block",
-            new WetHempBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, MapColor.GREEN).strength(0.5f).sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
+            new WetHempBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).strength(0.5f).sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
 
     public static final Block STASH_JAR = registerBlock("stash_jar",
             new StashJarBlock(FabricBlockSettings.of(Material.GLASS).strength(2f).nonOpaque().sounds(BlockSoundGroup.GLASS)), HempItemGroup.HEMP);
