@@ -4,6 +4,7 @@ import de.travikskoot.hemp.Hemp;
 import de.travikskoot.hemp.item.HempItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -24,17 +25,17 @@ import net.minecraft.util.Identifier;
 public class HempBlocks {
 
     //Instance Creation of Block
-    public static final Block HEMP_BLOCK = new Block(AbstractBlock.Settings.create()
+    public static final Block HEMP_BLOCK = registerBlock("hemp_block", new Block(FabricBlockSettings.create()
             .mapColor(MapColor.GREEN)
             .instrument(Instrument.BANJO)
             .strength(0.5f)
-            .sounds(BlockSoundGroup.GRASS));
+            .sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
 
-    public static final Block WET_HEMP_BLOCK = new Block(AbstractBlock.Settings.create()
+    public static final Block WET_HEMP_BLOCK = registerBlock("wet_hemp_block", new Block(FabricBlockSettings.create()
             .mapColor(MapColor.GREEN)
             .strength(0.6f)
-            .sounds(BlockSoundGroup.GRASS));
-    public static final Block STASH_JAR = new Block(AbstractBlock.Settings.create()
+            .sounds(BlockSoundGroup.GRASS)), HempItemGroup.HEMP);
+    public static final Block STASH_JAR = registerBlock("stash_jar", new Block(FabricBlockSettings.create()
             .instrument(Instrument.HAT)
             .strength(0.3f)
             .sounds(BlockSoundGroup.GLASS)
@@ -42,15 +43,15 @@ public class HempBlocks {
             .allowsSpawning(Blocks::never)
             .solidBlock(Blocks::never)
             .suffocates(Blocks::never)
-            .blockVision(Blocks::never));
+            .blockVision(Blocks::never)), HempItemGroup.HEMP);
 
-    public static final Block HEMP_CROP = new Block(AbstractBlock.Settings.create()
+    public static final Block HEMP_CROP = registerBlock("hemp_crop", new Block(FabricBlockSettings.create()
             .mapColor(MapColor.DARK_GREEN)
             .noCollision()
             .ticksRandomly()
             .breakInstantly()
             .sounds(BlockSoundGroup.CROP)
-            .pistonBehavior(PistonBehavior.DESTROY));
+            .pistonBehavior(PistonBehavior.DESTROY)), HempItemGroup.HEMP);
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Hemp.MOD_ID, name), block);

@@ -12,6 +12,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class HempItems {
@@ -74,7 +75,7 @@ public class HempItems {
         addToItemGroup(HempItemGroup.HEMP, BROWNIE);
     }
 
-    private static void addToItemGroup(ItemGroup group, Item item) {
+    private static void addToItemGroup(RegistryKey<ItemGroup> group, Item item) {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
     }
 
