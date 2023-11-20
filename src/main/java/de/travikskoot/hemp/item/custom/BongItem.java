@@ -1,8 +1,11 @@
 package de.travikskoot.hemp.item.custom;
 
 import de.travikskoot.hemp.effect.HempStatusEffect;
+import de.travikskoot.hemp.mixin.GameRendererMixin;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.render.GameRenderer;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,10 +15,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.UseAction;
+import net.minecraft.util.*;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -26,6 +26,8 @@ public class BongItem extends Item {
     public BongItem(Settings settings) {
         super(settings);
     }
+
+    private static boolean creeperShaderActive = false;
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -58,13 +60,34 @@ public class BongItem extends Item {
                     serverWorld.spawnParticles(ParticleTypes.SMALL_FLAME,
                             user.getX() - 0.25, user.getY() + 0.9, user.getZ(), 10, 0.1, 0.1, 0.1, 0);
                 }
-                // TODO Green View
+                setCreeperShaderActive(true);
+                applyCreeperShader();
             } else {
                 user.sendMessage(Text.translatable("message.hemp.underwater").formatted(Formatting.RED));
             }
         }
 
         return super.use(world, user, hand);
+    }
+
+    // TODO create or get onPlayerPerspectiveChange handler
+    public static void onPlayerPerspectiveChange() {
+        if (creeperShaderActive) {
+            applyCreeperShader();
+        }
+    }
+
+    private static void applyCreeperShader() {
+        MinecraftClient.getInstance().execute(() -> {
+            GameRenderer gameRenderer = MinecraftClient.getInstance().gameRenderer;
+            if (gameRenderer instanceof GameRendererMixin) {
+                ((GameRendererMixin) gameRenderer).invokeLoadPostProcessor(new Identifier("shaders/post/creeper.json"));
+            }
+        });
+    }
+
+    public static void setCreeperShaderActive(boolean active) {
+        creeperShaderActive = active;
     }
 
     @Override
