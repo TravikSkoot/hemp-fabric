@@ -67,7 +67,7 @@ public class BongItem extends Item {
             }
         }
 
-        return super.use(world, user, hand);
+        return TypedActionResult.pass(user.getStackInHand(hand));
     }
 
     // TODO create or get onPlayerPerspectiveChange handler
