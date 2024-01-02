@@ -29,7 +29,7 @@ public class HempItems {
     public static final Item JOINT = registerItem("joint",
             new JointItem(new FabricItemSettings().maxDamage(10)));
     public static final Item HEMP_SEEDS = registerItem("hemp_seeds",
-            new AliasedBlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
+            new BlockItem(HempBlocks.HEMP_CROP,new FabricItemSettings()));
     public static final Item GRINDER = registerItem("grinder",
             new GrinderItem(new FabricItemSettings()));
     public static final Item DRY_HEMP = registerItem("dry_hemp",
@@ -37,7 +37,8 @@ public class HempItems {
     public static final Item WET_HEMP = registerItem("wet_hemp",
             new Item(new FabricItemSettings()));
     public static final Item BONG = registerItem("bong",
-            new BongItem(new FabricItemSettings().maxDamage(3)));
+            new BongItem(new FabricItemSettings()
+                    .maxDamage(3)));
     public static final Item BROWNIE = registerItem("brownie",
                 new Item(new FabricItemSettings()
                         .food(new FoodComponent.Builder()
